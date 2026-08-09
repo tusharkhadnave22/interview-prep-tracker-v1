@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: interview-prep-backend
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: backend/Dockerfile
+    port: 8080
+    envVars:
+      - key: FRONTEND_URL
+        value: https://your-frontend.vercel.app
+      - key: DB_USERNAME
+        value: root
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_URL
+        sync: false
+
